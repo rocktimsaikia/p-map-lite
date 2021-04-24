@@ -1,35 +1,59 @@
-# YOUR_PACKAGE_NAME [![Build Status](https://github.com/rocktimsaikia/node-boilerplate/workflows/CI/badge.svg?branch=main)](https://github.com/rocktimsaikia/node-boilerplate/actions?query=branch%3Amain+workflow%3ACI)
+# p-map-lite [![Build Status](https://github.com/rocktimsaikia/p-map-lite/workflows/CI/badge.svg?branch=main)](https://github.com/rocktimsaikia/p-map-lite/actions?query=branch%3Amain+workflow%3ACI)
 
-> Your module description goes here
+> A lightweight (`~180 bytes`) p-map version for daily uses.
 
-## Install
+This module is the lite version of similar packages like this (ex: [p-iteration](https://github.com/toniov/p-iteration), [p-map](https://github.com/sindresorhus/p-map)). It removes all the unused options and aims to be as simple as possible. It is meant to be used in daily development, small applications.
+
+## Highlights
+- **Lightweight** (`~180 bytes`). Zero dependencies :tada:
+- **Simple and easy** to use for daily promise uses
+- **Portable**. Works pretty much everywhere.
+- Test case added
+
+## Installation
 
 ```bash
-npm install YOUR_PACKAGE_NAME
+npm install p-map-lite
+```
+Or, with yarn:
+```sh
+yarn add p-map-lite
 ```
 
 ## Usage
 
 ```js
-const unicornFun = require("YOUR_PACKAGE_NAME");
+import pMap from 'p-map-lite';
 
-unicornFun("unicorns");
-//=> 'unicorns & rainbows'
+const postIds = [1,2,3];
+
+const mapper = async id => {
+	const res = await fetch(`/api/posts/${id}`);
+    return res.json();
+};
+
+const result = await pMap(postIds, mapper);
+
+console.log(result);
+//=> [{id: 1,...}, {id: 2,...}, {id: 3,...}]
 ```
 
 ## API
 
-### unicornFun(options?)
+### pMap(input, mapper)
 
-Takes one unicorn and returns two. Awesome stuff!!
+Returns a `Promise` that is fulfilled when all of the input's promises have resolved, or if the input iterable contains no promises.
 
-#### options
+#### input
 
-##### anotherOption
+Type: `Iterable<Promise | unknown>`<br>
+Iterable to be iterated over in the `mapper` function.
 
-Type: `number`<br>
-Default: `2`
+#### mapper(element, index)
+Type: Function
+
+Expected to return a Promise or value.
 
 ## License
 
-MIT 2021 © [YOUR_NAME](YOUR_WEBSITE)
+MIT 2021 © [Rocktim Saikia](https://rocktimcodes.site)

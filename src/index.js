@@ -1,9 +1,7 @@
-const unicornFun = (input, { postfix = 'rainbows' } = {}) => {
-  if (typeof input !== 'string') {
-    throw new TypeError(`Expected a string, got ${typeof input}`);
-  }
-
-  return `${input} & ${postfix}`;
+export default async (array, mapper) => {
+  const promiseArray = array.map(async (item, index) => {
+    const current = await Promise.resolve(item);
+    return mapper(current, index);
+  });
+  return Promise.all(promiseArray);
 };
-
-export default unicornFun;

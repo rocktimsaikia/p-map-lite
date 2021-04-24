@@ -2,20 +2,40 @@ name: CI
 on:
   - push
   - pull_request
+
 jobs:
-  test:
-    name: Node.js ${{ matrix.node-version }}
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version:
-          - 14
-          - 12
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Begin CI...
+        uses: actions/checkout@v2
+
+      - name: Use Node 12
+        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn install
-      - run: yarn test
+          node-version: 12.x
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Use cached node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nodeModules-
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+        env:
+          CI: true
+
+      - name: Lint
+        run: yarn lint
+        env:
+          CI: true
+
+      - name: Test
+        run: yarn test
+        env:
+          CI: true
