@@ -28,7 +28,7 @@ import pMap from 'p-map-lite';
 const postIds = [1,2,3];
 
 const mapper = async id => {
-	const res = await fetch(`/api/posts/${id}`);
+    const res = await fetch(`/api/posts/${id}`);
     return res.json();
 };
 
@@ -53,6 +53,17 @@ Iterable to be iterated over in the `mapper` function.
 Type: Function
 
 Expected to return a Promise or value.
+
+## FAQs
+<details>
+  <summary>What did I create this lib ?</summary>
+  Initially, I was using p-iteration for my projects but it has not seen an update in almost 4 years. Also, I didn't need the extra methods. So I needed a simple straightforward map API for handing promise `Iterables`. So I built this for my personal use.
+</details>
+
+<details>
+  <summary>Why not <a href="https://github.com/sindresorhus/p-map">p-map</a> ?</summary>
+  I needed a zero dependency api. I was trying to minize my bundle size of my [personal website](htts://rocktimcodes.site). Also I didn't care much about controlling the concurrency as my application is quite small.
+</details>
 
 ## License
 
