@@ -57,7 +57,7 @@ Expected to return a Promise or value.
 ## FAQs
 <details>
   <summary>What did I create this lib ?</summary>
-  Initially, I was using p-iteration for my projects but it has not seen an update in almost 4 years. Also, I didn't need the extra methods. So I needed a simple straightforward map API for handing promise `Iterables`. So I built this for my personal use.
+  Initially, I was using <a href="https://github.com/toniov/p-iteration">p-iteration</a> for my projects but it has not seen an update in almost 4 years. Also, I didn't need the extra methods. I needed a simple straightforward map API for handing promise `Iterables`. So I built this for my personal use.
 </details>
 
 <details>
