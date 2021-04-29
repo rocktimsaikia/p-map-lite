@@ -1,6 +1,6 @@
 {
   "name": "p-map-lite",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "description": "A lightweight (180 bytes) p-map version for daily uses.",
   "author": "Rocktim Saikia",
@@ -18,7 +18,8 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "postversion": "git push && git push --tags"
   },
   "husky": {
     "hooks": {
