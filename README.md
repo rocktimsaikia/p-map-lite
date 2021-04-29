@@ -48,7 +48,7 @@ Returns a `Promise` that is fulfilled when all of the input's promises have reso
 
 | Parameter | Type                       | Description                                                                                    |
 | :-------- | :------------------------- | :--------------------------------------------------------------------------------------------- |
-| `input`   | `Array<Promise | unknown>` | **Required**. Array to be iterated over in the `mapper` function.                              |
+| `input`   | `Array`                    | **Required**. Array to be iterated over in the `mapper` function.                              |
 | `mapper`  | `Function/Callback`        | **Required**. An callback function to handle the logic just like in the built-in `map` method. |
 
 ## License
