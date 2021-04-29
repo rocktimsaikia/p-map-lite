@@ -42,14 +42,14 @@ const postIds = [1, 2, 3];
 
 ## API
 
-#### pMap(arr, mapper)
+#### pMap(input, mapper)
 
 Returns a `Promise` that is fulfilled when all of the input's promises have resolved, or if the input iterable contains no promises.
 
-| Parameter | Type                       | Description                                                                                    |
-| :-------- | :------------------------- | :--------------------------------------------------------------------------------------------- |
-| `input`   | `Array`                    | **Required**. Array to be iterated over in the `mapper` function.                              |
-| `mapper`  | `Function/Callback`        | **Required**. An callback function to handle the logic just like in the built-in `map` method. |
+| Parameter | Type                | Description                                                                                    |
+| :-------- | :------------------ | :--------------------------------------------------------------------------------------------- |
+| `input`   | `Array`             | **Required**. Array to be iterated over in the `mapper` function.                              |
+| `mapper`  | `Function/Callback` | **Required**. An callback function to handle the logic just like in the built-in `map` method. |
 
 ## License
 
