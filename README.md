@@ -1,6 +1,6 @@
 # p-map-lite
 
-> A lightweight (`~180 bytes`) p-map version for daily uses.
+> A lightweight (`~180 bytes`) p-map version for daily promise uses.
 
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/rocktimsaikia/p-map-lite/CI/main?style=flat-square)
 ![npm](https://img.shields.io/npm/v/p-map-lite?style=flat-square&color=brightgreen)

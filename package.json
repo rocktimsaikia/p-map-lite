@@ -2,8 +2,14 @@
   "name": "p-map-lite",
   "version": "1.1.1",
   "license": "MIT",
-  "description": "A lightweight (180 bytes) p-map version for daily uses.",
-  "author": "Rocktim Saikia",
+  "description": "A lightweight(180 bytes) p-map version for daily promsise uses.",
+  "repository": "rocktimsaikia/p-map-lite",
+  "funding": "https://www.buymeacoffee.com/rocktimcodes",
+  "author": {
+    "name": "Rocktim Saikia",
+    "email": "rocktimthedev@gmail.com",
+    "url": "https://rocktimcodes.site"
+  },
   "main": "dist/index.js",
   "module": "dist/p-map-lite.esm.js",
   "typings": "dist/index.d.ts",
