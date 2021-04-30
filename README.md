@@ -8,13 +8,17 @@
 An opinionated lightweight promise map module. Similar to packages like [p-iteration](https://github.com/toniov/p-iteration), [p-map](https://github.com/sindresorhus/p-map).<br>
 Except it removes all the unused options and aims to be as simple as possible.
 
-## Highlights
+<br />
+
+### Highlights
 
 - **Lightweight** (`~180 bytes`). Zero dependencies :tada:
 - **Simple and easy** to use for daily promise uses.
 - **Portable**. Both `esm` and `cjs` support.
 
-## Setup
+<br />
+
+### Setup
 
 Install the package:
 
@@ -22,7 +26,9 @@ Install the package:
 npm install p-map-lite
 ```
 
-## Usage
+<br />
+
+### Usage
 
 ```js
 import pMap from 'p-map-lite';
@@ -40,7 +46,9 @@ const postIds = [1, 2, 3];
 })();
 ```
 
-## API
+<br />
+
+### API
 
 #### pMap(input, mapper)
 
@@ -50,6 +58,8 @@ Returns a `Promise` that is fulfilled when all of the input's promises have reso
 | :-------- | :------------------ | :--------------------------------------------------------------------------------------------- |
 | `input`   | `Array`             | **Required**. Array to be iterated over in the `mapper` function.                              |
 | `mapper`  | `Function/Callback` | **Required**. An callback function to handle the logic just like in the built-in `map` method. |
+
+<br />
 
 ## License
 
