@@ -61,6 +61,6 @@ Returns a `Promise` that is fulfilled when all of the input's promises have reso
 
 <br />
 
-## License
+### License
 
 [MIT](https://choosealicense.com/licenses/mit/)
