@@ -1,0 +1,9 @@
+{
+  "env": {
+    "jest": true
+  },
+  "extends": ["@antfu"],
+  "plugins": ["jest"],
+  "rules": {},
+  "ignorePatterns": ["dist", "node_modules"]
+}
