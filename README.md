@@ -1,14 +1,14 @@
-## p-map-lite 
+# p-map-lite 
 
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/rocktimsaikia/p-map-lite/CI/main?style=flat-square) ![npm](https://img.shields.io/npm/v/p-map-lite?style=flat-square&color=brightgreen)
 
-<samp> A lightweight (`~180 bytes`) p-map version for daily promise uses.</samp>
+<samp> A lightweight p-map version for daily promise uses.</samp>
 
 
 
 <br />
 
-#### Features
+### Features
 
 - Lightweight (`~180 bytes`) - zero dependencies :tada:
 - Simple and easy to use for daily promise uses
@@ -16,7 +16,7 @@
 
 <br />
 
-#### Usage
+### Usage
 
 
 ```bash
@@ -41,9 +41,9 @@ const postIds = [1, 2, 3];
 
 <br />
 
-#### API
+### API
 
-##### pMap(input, mapper)
+#### pMap(input, mapper)
 
 Returns a `Promise` that is fulfilled when all of the input's promises have resolved, or if the input iterable contains no promises.
 
@@ -54,6 +54,6 @@ Returns a `Promise` that is fulfilled when all of the input's promises have reso
 
 <br />
 
-#### License
+### License
 
 [MIT](./LICENSE) License © 2021 [Rocktim Saikia](https://github.com/rocktimsaikia)
